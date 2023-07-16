@@ -1,0 +1,192 @@
+/* =====================
+    1. Global Reseting And Varibles
+   ===================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brand-color: #ffa51d;
+  --background-linear: linear-gradient(to left, #ff713b, var(--brand-color));
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #969595;
+  line-height: 1.6;
+}
+
+img,
+svg {
+  width: 100%;
+  display: block;
+}
+
+/* =====================
+    2. Typograpgy
+   ===================== */
+h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  color: white;
+}
+h2 {
+  font-size: 1.5rem;
+  color: #5a5959;
+}
+.bbq-image-content-subtitle,
+.bbq-image-content-quality,
+.bbq-form-text-subtitle {
+  color: var(--brand-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* =====================
+    3. Layout
+   ===================== */
+
+.bbq-master-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* BBQ Image Section */
+.bbq-image-section {
+  background-image: url(/images/dark-ribs.jpg);
+  background-size: cover;
+  height: 500px;
+  margin-bottom: 2em;
+}
+
+.bbq-image-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 85%;
+  text-align: center;
+  margin: 0 auto;
+}
+.bbq-image-content-title {
+  line-height: 1;
+}
+.bbq-image-content-quality {
+  position: relative;
+  order: -1;
+  padding: 0.2em;
+  letter-spacing: 1px;
+}
+.bbq-image-content-quality::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 4px solid transparent;
+  background: var(--background-linear);
+  height: 1px;
+  width: 100%;
+}
+
+.bbq-image-content-subtitle {
+  margin-bottom: 1em;
+}
+
+/* BBQ Form */
+.bbq-form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 85%;
+  margin: 0 auto;
+}
+.bbq-form-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.bbq-form-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.bbq-form-text-body {
+  text-align: center;
+}
+.bbq-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em 0;
+}
+.bbq-form input {
+  padding: 1em 2em;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #989997;
+}
+.bbq-form input[type="submit"] {
+  color: white;
+  background: var(--background-linear);
+  outline: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+}
+.bbq-form input[type="submit"]:hover,
+.bbq-form input[type="submit"]:focus {
+  cursor: pointer;
+  background: linear-gradient(to left, #ff723be3, #ffa51dbe);
+}
+.bbq-form-small-text {
+  font-size: 0.875rem;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* =====================
+    4. Media Queries
+   ===================== */
+
+@media screen and (min-width: 600px) {
+  .bbq-master-container {
+    flex-direction: row;
+    height: 100vh;
+    align-items: center;
+    gap: 2em;
+  }
+  .bbq-image-section {
+    width: 60%;
+    margin: 0;
+  }
+  .bbq-form-section {
+    width: 40%;
+    margin: 0;
+  }
+  .bbq-image-section {
+    height: 100%;
+  }
+  .bbq-form-text {
+    width: 85%;
+  }
+  .bbq-form {
+    width: 65%;
+  }
+  .bbq-image-content {
+    justify-content: center;
+    gap: 1em;
+  }
+  .bbq-image-content-quality {
+    position: absolute;
+    top: 0;
+  }
+}
