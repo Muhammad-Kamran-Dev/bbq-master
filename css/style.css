@@ -9,14 +9,15 @@
 }
 
 :root {
-  --brand-color: #ffa51d;
-  --background-linear: linear-gradient(to left, #ff713b, var(--brand-color));
+  --brand-color: #f18119;
+  --background-linear: linear-gradient(to left, #ff713b, #ffa61d);
 }
 
 body {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   color: #969595;
   line-height: 1.6;
+  font-size: 1rem;
 }
 
 img,
@@ -29,19 +30,19 @@ svg {
     2. Typograpgy
    ===================== */
 h1 {
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 400;
   color: white;
 }
 h2 {
-  font-size: 1.5rem;
-  color: #5a5959;
+  font-size: 1.3125rem;
+  color: #404040;
 }
 .bbq-image-content-subtitle,
 .bbq-image-content-quality,
 .bbq-form-text-subtitle {
   color: var(--brand-color);
-  font-weight: 700;
+  font-weight: 900;
   text-transform: uppercase;
 }
 /* =====================
@@ -136,7 +137,7 @@ h2 {
   color: white;
   background: var(--background-linear);
   outline: none;
-  font-weight: 700;
+  font-weight: 900;
   text-transform: uppercase;
   border: none;
 }
@@ -146,7 +147,7 @@ h2 {
   background: linear-gradient(to left, #ff723be3, #ffa51dbe);
 }
 .bbq-form-small-text {
-  font-size: 0.875rem;
+  font-size: 0.625rem;
   text-align: center;
   max-width: 80%;
   margin: 0 auto;
@@ -158,6 +159,16 @@ h2 {
    ===================== */
 
 @media screen and (min-width: 600px) {
+  body {
+    font-size: 1.125rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+
   .bbq-master-container {
     flex-direction: row;
     height: 100vh;
